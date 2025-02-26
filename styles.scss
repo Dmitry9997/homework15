@@ -1,0 +1,88 @@
+@use "./variables" as vars;
+@use "./mixin";
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 1280px;
+  width: auto;
+  background-color: vars.$main-color;
+  margin: 0 auto;
+}
+.container_header {
+  background-color: vars.$primary-color-green;
+  margin: 8px;
+  border-radius: 64px;
+  font-family: vars.$secondary-font;
+  color: vars.$font-color-header;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: vars.$font-color-header;
+  }
+  .nav_left {
+    @include mixin.header-style;
+  }
+  .nav_logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .nav_right {
+    @include mixin.header-style;
+  }
+}
+.container_first {
+  display: flex;
+  align-items: center;
+  padding: 40px 85px;
+  .main_title {
+    width: 540px;
+    font-family: vars.$primery-font;
+    font-size: 67px;
+    -webkit-text-stroke: 1px black;
+    color: vars.$primary-color-green;
+    letter-spacing: -2px;
+    text-shadow: 1px 4px 5px gray;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .main_description {
+    font-family: vars.$secondary-font;
+    font-size: 22px;
+    color: vars.$primary-color-description;
+    padding-top: 16px;
+    font-weight: 400;
+  }
+  .main_button {
+    display: flex;
+    gap: 16px;
+    padding-top: 40px;
+  }
+  .main_button--green {
+    border-radius: 8px;
+    border: none;
+    border-color: none;
+    padding: 16px 72.5px;
+    font-size: 14px;
+    background-color: #65a30d;
+    color: #ecfdf5;
+  }
+  .main_button--border {
+    border-radius: 8px;
+    border: 1px solid vars.$primary-color-border-button;
+    border-color: none;
+    padding: 16px 72.5px;
+    font-size: 14px;
+    background-color: vars.$main-color;
+    color: vars.$primary-color-green;
+  }
+}

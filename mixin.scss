@@ -1,0 +1,17 @@
+@mixin basic-button {
+  border: radius 8px;
+  border: none;
+  border-color: none;
+  padding: 16px 72.5px;
+  font-size: 14px;
+  bottom: #65a30d;
+  color: #ecfdf5;
+}
+
+@mixin header-style {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  padding: 16px 32px;
+  font-weight: 300;
+}

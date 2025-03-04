@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin-left: 5px;
 }
 
 body {
@@ -39,6 +40,10 @@ body {
   font-weight: 300;
   font-size: 14px;
 }
+.container_header .logo {
+  width: 32px;
+  height: 32px;
+}
 .container_header .nav_right {
   display: flex;
   gap: 16px;
@@ -48,9 +53,11 @@ body {
 }
 
 .container_first {
+  margin: 8px;
   display: flex;
   align-items: center;
-  padding: 40px 85px;
+  padding-top: 85px;
+  padding-bottom: 104px;
 }
 .container_first .main_title {
   width: 540px;
@@ -77,19 +84,492 @@ body {
 }
 .container_first .main_button--green {
   border-radius: 8px;
-  border: none;
-  border-color: none;
   padding: 16px 72.5px;
   font-size: 14px;
   background-color: #65a30d;
   color: #ecfdf5;
+  border: none;
 }
 .container_first .main_button--border {
   border-radius: 8px;
-  border: 1px solid #34d399;
-  border-color: none;
   padding: 16px 72.5px;
   font-size: 14px;
   background-color: #ecfdf5;
   color: #064e3b;
+  border: 1px solid #34d399;
+}
+
+.container_gallery .wrapper__gallery--text {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 120px;
+  margin: 8px;
+}
+.container_gallery .gallery_title {
+  line-height: 1.5;
+  font-family: "Syne", serif;
+  font-size: 51px;
+  font-weight: bold;
+  color: #064e3b;
+}
+.container_gallery .gallery_description {
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  color: #059669;
+}
+.container_gallery .container_gallery--img {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container_gallery .gallery_img {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+.container_gallery .gallery_arrow {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 13.5px;
+}
+.container_gallery .gallery_arrow p {
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  color: #059669;
+}
+.container_gallery .gallery_arrow img {
+  width: 32px;
+  height: 32px;
+}
+
+.pictury {
+  padding-top: 120px;
+}
+
+.bg-img {
+  display: flex;
+  justify-content: center;
+  background-image: url(./image/ImageBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 475px;
+}
+
+.wrapper__pictury--text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+}
+
+.pictury_title {
+  color: #ecfdf5;
+  font-family: "Syne", serif;
+  line-height: 1.3;
+  font-size: 67px;
+  font-weight: bold;
+}
+
+.pictury_description {
+  color: #ecfdf5;
+  font-family: "Work Sans", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.container_choose_plant {
+  display: flex;
+}
+.container_choose_plant .choose_img {
+  width: 640px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 201px 80px;
+}
+.container_choose_plant .choose_img img {
+  width: 140px;
+  height: 140px;
+}
+.container_choose_plant .block_choose_img--text {
+  padding-top: 12px;
+}
+.container_choose_plant .choose_text_title {
+  max-width: 100%;
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.container_choose_plant .choose_text_discription {
+  text-align: center;
+  color: #059669;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-top: 16px;
+}
+.container_choose_plant .block_choose--text {
+  width: 640px;
+  background-color: #dcfce7;
+  padding: 214px 24px;
+}
+.container_choose_plant .content_choose {
+  padding: 0px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container_choose_plant .content_choose--text {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+}
+.container_choose_plant .choose_title {
+  color: #064e3b;
+  font-family: "Work Sans", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 2;
+}
+.container_choose_plant .choose_description {
+  color: #059669;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.container_houseplants .houseplants_title {
+  margin: 8px;
+  padding-top: 160px;
+  color: #064e3b;
+  text-align: center;
+  font-family: "Syne", serif;
+  font-size: 51px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.container_houseplants .houseplants_description {
+  color: #059669;
+  text-align: center;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.container_houseplants .wrapper__houseplant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  padding-bottom: 160px;
+  gap: 40px;
+}
+.container_houseplants .content_houseplant {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container_houseplants .content_houseplant_img {
+  padding-right: 341.33px;
+}
+.container_houseplants .content_houseplant_title {
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.container_houseplants .content_houseplant_description {
+  color: #059669;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.choose_collection {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  padding: 120px 40px;
+  margin: 8px;
+}
+.choose_collection .block_left {
+  padding: 117.5px 20px;
+}
+.choose_collection .choose_collection_title {
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 51px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-bottom: 16px;
+}
+.choose_collection .choose_collection_description {
+  color: #059669;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+  padding-bottom: 32px;
+}
+.choose_collection .choose_collection_button {
+  padding: 16px 93.5px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  border: none;
+  color: #ecfdf5;
+  background-color: #65a30d;
+}
+.choose_collection .block_right {
+  width: 417px;
+  height: 426px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 48px;
+  border-radius: 48px;
+  background-color: #dcfce7;
+}
+.choose_collection .content_choose_collection_img {
+  padding-bottom: 8px;
+}
+.choose_collection .content_choose_collection_title {
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+  padding-bottom: 8px;
+}
+.choose_collection .content_choose_collection_description {
+  color: #059669;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.nav_footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 32px 32px 48px;
+}
+.nav_footer a {
+  color: #059669;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.nav_footer li:nth-child(1) {
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.nav_footer div span {
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.nav_footer_left--img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 3;
+  white-space: nowrap;
+}
+
+.nav_footer_right {
+  display: flex;
+  gap: 80px;
+  line-height: 2;
+}
+
+.coperight {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 32px 48px 32px;
+}
+.coperight .left {
+  color: #059669;
+  font-family: "Work Sans", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.coperight .right {
+  display: flex;
+  gap: 16px;
+  color: #064e3b;
+  font-family: "Syne", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+@media (max-width: 1232px) {
+  .block_choose_img--text {
+    text-align: center;
+  }
+}
+@media (max-width: 1183px) {
+  .container_choose_plant .choose_img {
+    padding: 159px 80px;
+  }
+  .container_choose_plant .block_choose_img--text {
+    padding-top: 12px;
+    text-align: center;
+  }
+  .container_choose_plant .block_choose--text {
+    padding: 88px 24px;
+  }
+  .container_choose_plant .content_choose {
+    flex-direction: column;
+  }
+  .pictury_title {
+    line-height: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 1040px) {
+  .gallery_pictury {
+    width: 381px;
+    height: 286px;
+  }
+}
+@media (max-width: 898px) {
+  .container_first .main_title {
+    width: 401px;
+  }
+  .container_first .main_button--green {
+    padding: 16px 37.75px;
+  }
+  .container_first .main_button--border {
+    padding: 16px 37.75px;
+  }
+  .container_choose_plant .choose_img {
+    padding: 88px 24px;
+  }
+  .choose_collection {
+    gap: 48px;
+  }
+  .choose_collection .choose_collection_button {
+    padding: 16px 82px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 828px) {
+  .container_houseplants .content_houseplant_img {
+    padding-right: 0px;
+  }
+  .nav_footer_right {
+    display: flex;
+    gap: 20px;
+    line-height: 2;
+  }
+}
+@media (max-width: 691px) {
+  .container_header .nav_left {
+    gap: 10px;
+    font-size: 10px;
+  }
+  .container_header .nav_right {
+    gap: 10px;
+    font-size: 10px;
+  }
+  .container_choose_plant {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container_choose_plant .block_choose--text {
+    padding: 30px 24px;
+  }
+}
+@media (max-width: 599px) {
+  .container_first {
+    flex-wrap: wrap;
+  }
+  .container_header .nav_left {
+    gap: 10px;
+    font-size: 6px;
+    padding: 8px 16px;
+  }
+  .container_header .nav_logo {
+    gap: 4px;
+    font-size: 7px;
+  }
+  .container_header .nav_right {
+    gap: 10px;
+    font-size: 6px;
+    padding: 8px 16px;
+  }
+  .container_header .logo {
+    width: 16px;
+    height: 16px;
+  }
+  .container_gallery .gallery_title {
+    line-height: 1.2;
+  }
+  .container_houseplants .wrapper__houseplant {
+    padding-bottom: 0px;
+  }
+  .container_houseplants .houseplants_title {
+    white-space: normal;
+  }
+  .choose_collection {
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .choose_collection .choose_collection_button {
+    padding: 16px 82px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 441px) {
+  .container_houseplants .wrapper__houseplant {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_footer_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+    padding: 40px;
+  }
+  .nav_footer {
+    flex-wrap: wrap;
+    padding: 8px 32px 32px 8px;
+  }
 }/*# sourceMappingURL=styles.css.map */

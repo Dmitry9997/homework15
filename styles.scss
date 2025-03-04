@@ -2,6 +2,7 @@
 @use "./mixin";
 * {
   box-sizing: border-box;
+  margin-left: 5px;
 }
 body {
   max-width: 1280px;
@@ -35,14 +36,20 @@ body {
     font-weight: 300;
     font-size: 14px;
   }
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
   .nav_right {
     @include mixin.header-style;
   }
 }
 .container_first {
+  margin: 8px;
   display: flex;
   align-items: center;
-  padding: 40px 85px;
+  padding-top: 85px;
+  padding-bottom: 104px;
   .main_title {
     width: 540px;
     font-family: vars.$primery-font;
@@ -68,21 +75,508 @@ body {
     padding-top: 40px;
   }
   .main_button--green {
-    border-radius: 8px;
-    border: none;
-    border-color: none;
-    padding: 16px 72.5px;
-    font-size: 14px;
+    @include mixin.basic-button;
     background-color: #65a30d;
     color: #ecfdf5;
+    border: none;
   }
   .main_button--border {
-    border-radius: 8px;
-    border: 1px solid vars.$primary-color-border-button;
-    border-color: none;
-    padding: 16px 72.5px;
-    font-size: 14px;
+    @include mixin.basic-button;
     background-color: vars.$main-color;
     color: vars.$primary-color-green;
+    border: 1px solid vars.$primary-color-border-button;
+  }
+}
+.container_gallery {
+  .wrapper__gallery--text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+    margin: 8px;
+  }
+  .gallery_title {
+    line-height: 1.5;
+    font-family: vars.$primery-font;
+    font-size: 51px;
+    font-weight: bold;
+    color: vars.$primary-color-green;
+  }
+  .gallery_description {
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    color: vars.$primary-color-description;
+  }
+
+  .container_gallery--img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .gallery_img {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  .gallery_arrow {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13.5px;
+    p {
+      font-family: vars.$secondary-font;
+      font-size: 14px;
+      color: vars.$primary-color-description;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.pictury {
+  padding-top: 120px;
+}
+.bg-img {
+  display: flex;
+  justify-content: center;
+  background-image: url(./image/ImageBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 475px;
+}
+.wrapper__pictury--text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 8px;
+}
+.pictury_title {
+  color: vars.$main-color;
+  font-family: vars.$primery-font;
+  line-height: 1.3;
+  font-size: 67px;
+  font-weight: bold;
+}
+.pictury_description {
+  color: vars.$main-color;
+  font-family: vars.$secondary-font;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.container_choose_plant {
+  display: flex;
+
+  .choose_img {
+    width: 640px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 201px 80px;
+    img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  .block_choose--img {
+  }
+  .block_choose_img--text {
+    padding-top: 12px;
+  }
+  .choose_text_title {
+    max-width: 100%;
+    color: vars.$primary-color-green;
+    font-family: vars.$primery-font;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .choose_text_discription {
+    text-align: center;
+    color: vars.$primary-color-description;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding-top: 16px;
+  }
+  .block_choose--text {
+    width: 640px;
+    background-color: vars.$primary-color-block;
+    padding: 214px 24px;
+  }
+  .content_choose {
+    padding: 0px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .content_choose--text {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+  }
+  .choose_title {
+    color: vars.$primary-color-green;
+    font-family: vars.$secondary-font;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 2;
+  }
+  .choose_description {
+    color: vars.$primary-color-description;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+.container_houseplants {
+  .houseplants_text {
+  }
+  .houseplants_title {
+    margin: 8px;
+    padding-top: 160px;
+    color: vars.$primary-color-green;
+    text-align: center;
+    font-family: vars.$primery-font;
+    font-size: 51px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .houseplants_description {
+    color: vars.$primary-color-description;
+    text-align: center;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .wrapper__houseplant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    padding-bottom: 160px;
+    gap: 40px;
+  }
+  .content_houseplant {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .content_houseplant_img {
+    padding-right: 341.33px;
+  }
+  .content_houseplant_title {
+    color: vars.$primary-color-green;
+    font-family: vars.$primery-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .content_houseplant_description {
+    color: vars.$primary-color-description;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+}
+
+.choose_collection {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  padding: 120px 40px;
+  margin: 8px;
+
+  .block_left {
+    padding: 117.5px 20px;
+  }
+
+  .choose_collection_title {
+    color: vars.$primary-color-green;
+    font-family: vars.$primery-font;
+    font-size: 51px;
+    font-weight: bold;
+    line-height: 1.2;
+    // white-space: nowrap;
+    padding-bottom: 16px;
+  }
+  .choose_collection_description {
+    color: vars.$primary-color-description;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+    padding-bottom: 32px;
+  }
+
+  .choose_collection_button {
+    @include mixin.secondary-button;
+    color: vars.$main-color;
+    background-color: vars.$primary-color-button;
+  }
+  .block_right {
+    width: 417px;
+    height: 426px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 48px;
+    border-radius: 48px;
+    background-color: vars.$primary-color-block;
+  }
+
+  .content_choose_collection {
+  }
+  .content_choose_collection_img {
+    padding-bottom: 8px;
+  }
+
+  .content_choose_collection_title {
+    color: vars.$primary-color-green;
+    font-family: vars.$primery-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: nowrap;
+    padding-bottom: 8px;
+  }
+  .content_choose_collection_description {
+    color: vars.$primary-color-description;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+}
+.nav_footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 32px 32px 48px;
+  a {
+    color: vars.$primary-color-description;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  li:nth-child(1) {
+    color: vars.$primary-color-green;
+    font-family: vars.$primery-font;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  div {
+    span {
+      color: vars.$primary-color-green;
+      font-family: vars.$primery-font;
+      font-size: 14px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}
+
+.nav_footer_left--img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: vars.$primary-color-green;
+  font-family: vars.$primery-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 3;
+  white-space: nowrap;
+}
+
+.nav_footer_right {
+  display: flex;
+  gap: 80px;
+  line-height: 2;
+}
+
+.coperight {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 32px 48px 32px;
+  .left {
+    color: vars.$primary-color-description;
+    font-family: vars.$secondary-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+  .right {
+    display: flex;
+    gap: 16px;
+    color: vars.$primary-color-green;
+    font-family: vars.$primery-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 1232px) {
+  .block_choose_img--text {
+    text-align: center;
+  }
+}
+@media (max-width: 1183px) {
+  .container_choose_plant {
+    .choose_img {
+      padding: 159px 80px;
+    }
+
+    .block_choose_img--text {
+      padding-top: 12px;
+      text-align: center;
+    }
+
+    .block_choose--text {
+      padding: 88px 24px;
+    }
+    .content_choose {
+      flex-direction: column;
+    }
+  }
+  .pictury_title {
+    line-height: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 1040px) {
+  .gallery_pictury {
+    width: 381px;
+    height: 286px;
+  }
+}
+
+@media (max-width: 898px) {
+  .container_first .main_title {
+    width: 401px;
+  }
+  .container_first .main_button--green {
+    padding: 16px 37.75px;
+  }
+  .container_first .main_button--border {
+    padding: 16px 37.75px;
+  }
+  .container_choose_plant .choose_img {
+    padding: 88px 24px;
+  }
+  .choose_collection {
+    gap: 48px;
+  }
+  .choose_collection .choose_collection_button {
+    padding: 16px 82px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 828px) {
+  .container_houseplants .content_houseplant_img {
+    padding-right: 0px;
+  }
+  .nav_footer_right {
+    display: flex;
+    gap: 20px;
+    line-height: 2;
+  }
+}
+@media (max-width: 691px) {
+  .container_header .nav_left {
+    gap: 10px;
+    font-size: 10px;
+  }
+  .container_header .nav_right {
+    gap: 10px;
+    font-size: 10px;
+  }
+  .container_choose_plant {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container_choose_plant .block_choose--text {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 599px) {
+  .container_first {
+    flex-wrap: wrap;
+  }
+  .container_header .nav_left {
+    gap: 10px;
+    font-size: 6px;
+    padding: 8px 16px;
+  }
+  .container_header .nav_logo {
+    gap: 4px;
+    font-size: 7px;
+  }
+  .container_header .nav_right {
+    gap: 10px;
+    font-size: 6px;
+    padding: 8px 16px;
+  }
+  .container_header .logo {
+    width: 16px;
+    height: 16px;
+  }
+  .container_gallery .gallery_title {
+    line-height: 1.2;
+  }
+  .container_houseplants .wrapper__houseplant {
+    padding-bottom: 0px;
+  }
+  .container_houseplants .houseplants_title {
+    white-space: normal;
+  }
+  .choose_collection {
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .choose_collection .choose_collection_button {
+    padding: 16px 82px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 441px) {
+  .container_houseplants .wrapper__houseplant {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_footer_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+    padding: 40px;
+  }
+  .nav_footer {
+    flex-wrap: wrap;
+    padding: 8px 32px 32px 8px;
   }
 }

@@ -1,11 +1,14 @@
 @mixin basic-button {
-  border: radius 8px;
-  border: none;
-  border-color: none;
+  border-radius: 8px;
   padding: 16px 72.5px;
   font-size: 14px;
-  bottom: #65a30d;
-  color: #ecfdf5;
+}
+@mixin secondary-button {
+  padding: 16px 93.5px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  border: none;
 }
 
 @mixin header-style {

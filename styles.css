@@ -53,6 +53,7 @@ body {
 }
 
 .container_first {
+  overflow: hidden;
   margin: 8px;
   display: flex;
   align-items: center;
@@ -248,7 +249,6 @@ body {
 }
 
 .container_houseplants .houseplants_title {
-  margin: 8px;
   padding-top: 160px;
   color: #064e3b;
   text-align: center;
@@ -519,6 +519,7 @@ body {
 @media (max-width: 599px) {
   .container_first {
     flex-wrap: wrap;
+    font-size: 38px;
   }
   .container_header .nav_left {
     gap: 10px;
@@ -546,6 +547,7 @@ body {
   }
   .container_houseplants .houseplants_title {
     white-space: normal;
+    font-size: 46px;
   }
   .choose_collection {
     gap: 48px;
@@ -557,19 +559,33 @@ body {
   }
 }
 @media (max-width: 441px) {
-  .container_houseplants .wrapper__houseplant {
-    display: flex;
-    flex-direction: column;
+  .container_first .main_title {
+    width: 401px;
+    font-size: 60px;
   }
-  .nav_footer_left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 90px;
-    padding: 40px;
-  }
-  .nav_footer {
-    flex-wrap: wrap;
-    padding: 8px 32px 32px 8px;
-  }
+}
+.container_houseplants .wrapper__houseplant {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_first .main_button--green {
+  padding: 16px 30.75px;
+}
+
+.container_first .main_button--border {
+  padding: 12px 30.75px;
+}
+
+.nav_footer_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px;
+  padding: 40px;
+}
+
+.nav_footer {
+  flex-wrap: wrap;
+  padding: 8px 32px 32px 8px;
 }/*# sourceMappingURL=styles.css.map */
